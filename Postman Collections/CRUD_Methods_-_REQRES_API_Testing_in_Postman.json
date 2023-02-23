@@ -1,0 +1,378 @@
+{
+	"info": {
+		"_postman_id": "c744ecc0-08d6-410e-bfa3-6fb01b0b2b80",
+		"name": "REQRES API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET All Users",
+			"_postman_id": "d9157a3c-2fe0-4d92-a1e0-8b4fb194b835",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://reqres.in/api/users?page=2",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Single User",
+			"_postman_id": "77f18e55-9752-4b6e-b290-a3ca8847d529",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://reqres.in/api/users/:id",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "2",
+							"type": "string"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Single User Inexistent",
+			"_postman_id": "fb991bb0-db1a-4ed6-921c-721121409334",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://reqres.in/api/users/:id",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "23",
+							"type": "string"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET List <RESOURCE>",
+			"_postman_id": "c3f71762-880d-466d-9a26-9c06ca9268b8",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://reqres.in/api/unknown"
+			},
+			"response": []
+		},
+		{
+			"name": "GET Single <RESOURCE>",
+			"_postman_id": "b6f01c06-a579-48dc-a0e6-46e0742a7f54",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://reqres.in/api/unknown/:id",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"unknown",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "2",
+							"type": "string"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Single <RESOURCE> Not Found",
+			"_postman_id": "31a6f050-0c63-4c50-b975-4374dbf315d4",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://reqres.in/api/unknown/:id",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"unknown",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "23",
+							"type": "string"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create User",
+			"_postman_id": "94b31e9c-a0aa-45ed-9f62-c4e4f6d11272",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"morpheus\",\r\n    \"job\": \"leader\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://reqres.in/api/users"
+			},
+			"response": []
+		},
+		{
+			"name": "Update User 2",
+			"_postman_id": "a82d2a83-6426-4d48-834f-76943d4f08d1",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"morpheus\",\r\n    \"job\": \"zion resident\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://reqres.in/api/users/2"
+			},
+			"response": []
+		},
+		{
+			"name": "Update User",
+			"_postman_id": "7f9c3795-da75-4ede-9b33-ecbe93b1b894",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"morpheus\",\r\n    \"job\": \"zion resident\",\r\n    \"updatedAt\": \"2023-02-23T18:48:50.246Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://reqres.in/api/users/2"
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE User",
+			"_postman_id": "cf134c56-cb53-4dd6-aaa9-c916cb888539",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "https://reqres.in/api/users/2"
+			},
+			"response": []
+		},
+		{
+			"name": "Successful Login",
+			"_postman_id": "3cd2f25a-d05d-438b-accc-79dd1d3ae891",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"eve.holt@reqres.in\",\r\n    \"password\": \"cityslicka\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://reqres.in/api/login"
+			},
+			"response": []
+		},
+		{
+			"name": "Unsuccessful Login",
+			"_postman_id": "951b9972-d4a5-44fb-a43d-e72184732673",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"peter@klaven\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://reqres.in/api/login"
+			},
+			"response": []
+		},
+		{
+			"name": "Successful Register",
+			"_postman_id": "87c563a1-f2b4-4cb0-a7a7-e16adcbafd95",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"eve.holt@reqres.in\",\r\n    \"password\": \"pistol\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://reqres.in/api/register"
+			},
+			"response": []
+		},
+		{
+			"name": "Unsuccessful Register - Missing Password",
+			"_postman_id": "797e4933-cdcd-483f-b78a-19c7af31aa0e",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"sydney@fife\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://reqres.in/api/register"
+			},
+			"response": []
+		},
+		{
+			"name": "Delayed Response",
+			"_postman_id": "77602409-bed1-4e16-8468-1f55038eb64a",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://reqres.in/api/users?delay=3",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users"
+					],
+					"query": [
+						{
+							"key": "delay",
+							"value": "3",
+							"type": "text"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
